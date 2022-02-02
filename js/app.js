@@ -7,7 +7,12 @@ const menuImg = document.getElementsByClassName("menu-bckg");
 const transparentBtn = document.getElementsByClassName("btn-transparent");
 const btnLine = document.getElementsByClassName("btn-line");
 const scrollLine = document.getElementById("scroll-line")
+const instaImg = document.getElementsByClassName("insta-img");
+const footerSocials = document.getElementsByClassName("social");
+const buttons = document.getElementsByTagName("a");
+console.log(buttons);
 
+// Event Listeners
 document.getElementById("menu-btn").addEventListener('click', popUpMenu);
 for (i = 0; i < menuText.length; i++) {
     menuText[i].addEventListener("mouseenter", changeMenuBackground);
@@ -21,6 +26,24 @@ for (i = 0; i < transparentBtn.length; i++) {
 }
 for (i = 0; i < transparentBtn.length; i++) {
     transparentBtn[i].addEventListener("mouseleave", animateBtnLineBack.bind(null, i));
+}
+for (i = 0; i < instaImg.length; i++) {
+    instaImg[i].addEventListener("mouseenter", instagramImgOverlay);
+}
+for (i = 0; i < instaImg.length; i++) {
+    instaImg[i].addEventListener("mouseleave", instagramImgOverlayRemove);
+}
+for (i = 0; i < footerSocials.length; i++) {
+    footerSocials[i].addEventListener("mouseenter", footerSocialsBackground);
+}
+for (i = 0; i < footerSocials.length; i++) {
+    footerSocials[i].addEventListener("mouseleave", footerSocialsBackgroundRemove);
+}
+for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("mouseenter", mouseCircleSize);
+}
+for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("mouseleave", mouseCircleSizeBack);
 }
 
 // Function that pops-up the menu
@@ -111,3 +134,46 @@ document.addEventListener("scroll", function(){
     let scrollLineWidth = parseInt((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
     scrollLine.style.width = `${scrollLineWidth}%`
 });
+
+function instagramImgOverlay(e) {
+    const overlay = e.target.getElementsByClassName("insta-img-overlay")[0];
+    const icon = e.target.getElementsByClassName("insta-icon")[0];
+    overlay.style.opacity = "1";
+    icon.style.animation = "show-insta-icon .3s"
+}
+
+function instagramImgOverlayRemove(e) {
+    const overlay = e.target.getElementsByClassName("insta-img-overlay")[0];
+    const icon = e.target.getElementsByClassName("insta-icon")[0];
+    overlay.style.opacity = "0";
+    icon.style.animation = "hide-insta-icon .3s"
+}
+
+function footerSocialsBackground(e) {
+    const overlay = e.target.getElementsByClassName("social-overlay")[0];
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+
+}
+function footerSocialsBackgroundRemove(e) {
+    const overlay = e.target.getElementsByClassName("social-overlay")[0];
+    overlay.style.width = "0%";
+    overlay.style.height = "0%";
+}
+
+let circle = document.getElementById('mouse-circle');
+const onMouseMove = (e) => {
+  circle.style.left = `${e.pageX - 20}px`;
+  circle.style.top = `${e.pageY - 20}px`;
+
+}
+document.addEventListener('mousemove', onMouseMove);
+
+function mouseCircleSize(e) {
+    circle.style.width = "25px";
+    circle.style.height = "25px";
+}
+function mouseCircleSizeBack(e) {
+    circle.style.width = "14px";
+    circle.style.height = "14px";
+}
