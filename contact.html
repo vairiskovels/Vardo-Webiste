@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vardo - Webflow website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- Satoshi Font -->
+    <link href="https://api.fontshare.com/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div id="mouse-circle"></div>
+    <div class="scroll-line-wrap">
+        <div class="scroll-line" id="scroll-line"></div>
+    </div>
+    <header id="header" class="header">
+        <nav id="nav-bar" class="nav-bar">
+            <div class="nav-bar-col">
+                <h1><a href="index.html"><img src="img/logo/vardo.png" alt="logo" class="nav-bar-logo link"></a></h1>
+                <div class="nav-bar-line link"></div>
+                <a class="nav-bar-btn link">A creative template</a>
+            </div>
+            <div class="nav-bar-col">
+                <div class="cart">
+                    <img src="img/icons/cart.svg" alt="cart" class="link">
+                    <div class="cart-num link">0</div>
+                </div>
+                <div class="menu-btn link" id="menu-btn">
+                    <img src="img/menu.png" alt="" class="menu-btn-img">
+                    <h4 class="menu-btn-text show-b" id="show-btn">Menu</h4>
+                    <h4 class="menu-btn-text hide-b" id="hide-btn">Close</h4>
+                </div>
+            </div>
+        </nav>
+
+        <div class="menu hide" id="menu">
+            <img src="img/img7.jpg" alt="img7" class="menu-bckg hide-img" id="home-bckg">
+            <img src="img/img16.jpeg" alt="img16" class="menu-bckg hide-img" id="project-bckg">
+            <img src="img/img13.jpeg" alt="img13" class="menu-bckg hide-img" id="about-bckg">
+            <img src="img/img14.jpeg" alt="img14" class="menu-bckg hide-img" id="blog-bckg">
+            <img src="img/img15.jpeg" alt="img15" class="menu-bckg hide-img" id="contact-bckg">
+            <div class="menu-content">
+                <div class="link menu-link hide" id="menu-home"><a href="index.html">Home</a></div>
+                <div class="link menu-link hide" id="menu-project" ><a href="project.html">Project</a></div>
+                <div class="link menu-link hide" id="menu-about"><a href="about.html">About</a></div>
+                <div class="link menu-link hide" id="menu-blog"><a href="blog.html">Blog</a></div>
+                <div class="link menu-link hide" id="menu-contact"><a href="contact.html">Contact</a></div>
+            </div>
+            <div class="menu-information">
+                <div class="address">
+                    <a class="address-link">741 New South Head Rd, Triple Bay</a>
+                    <a class="address-link">SWFW 3148, New York</a>
+                </div>
+                <div class="contacts">
+                    <a href="#" class="contacts-link">P: 3740 213 301</a>
+                    <a href="#" class="contacts-link">E: contact@vardo.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header mb-3" id="contact-a">
+        <div class="container">
+            <h2 class="mb-2">Let us know what you're looking for</h2>
+            <p class="mb-7">Get the price and proposal to your Email!</p>
+            <div class="card row big-card-two-col mb-3">
+                <div class="col big-card-image"></div>
+                <div class="col big-card-text">
+                    <form id="contact-form">
+                        <div class="form-input">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" autocomplete="off">
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" autocomplete="off">
+                        </div>
+                        <div class="form-input">
+                            <label for="company">Company</label>
+                            <input type="text" name="company" autocomplete="off">
+                        </div>
+                        <div class="form-input">
+                            <label for="message">How can we help you?</label>
+                            <textarea name="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <input type="submit" value="Send Message" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+            <div class="brands">
+                <div class="row brands-text mb-3"><p>We worked with the world&rsquo;s <span class="h-text">biggest brands</span>.</p></div>
+                <div class="row brands-logo">
+                    <div class="brand"><img src="img/logo/spage.png"></div>
+                    <div class="brand"><img src="img/logo/aoob.png"></div>
+                    <div class="brand"><img src="img/logo/move.png"></div>
+                    <div class="brand"><img src="img/logo/pofo.png"></div>
+                    <div class="brand"><img src="img/logo/northside.png"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section-contact-1 mb-8 my-5" id="about-c">
+        <div class="container">
+            <div class="row">
+                <div class="col mr-5">
+                    <div class="circle"></div>
+                </div>
+                <div class="col">
+                    <div class="col-text">
+                        <h2 class="title-2 mb-3">Let's work together.</h2>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-instagram mb-3" id="about-d">
+        <div class="container">
+            <div class="row mb-2">
+                <h3 class="title-3">Follow us on Instagram</h3>
+                <a href="https://www.instagram.com/vairiskovels" target="_blank" class="btn btn-dark">Follow on Instagram</a>
+            </div>
+        </div>
+        <div class="row">
+            <a href="https://www.instagram.com/" target="_blank" class="insta-img">
+                <img src="img/img9.jpg" >
+                <div class="insta-img-overlay">
+                    <img src="img/social/ig.svg" class="insta-icon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="insta-img">
+                <img src="img/img10.jpg">
+                <div class="insta-img-overlay">
+                    <img src="img/social/ig.svg" class="insta-icon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="insta-img">
+                <img src="img/img11.jpg">
+                <div class="insta-img-overlay">
+                    <img src="img/social/ig.svg" class="insta-icon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="insta-img">
+                <img src="img/img12.jpg">
+                <div class="insta-img-overlay">
+                    <img src="img/social/ig.svg" class="insta-icon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="insta-img">
+                <img src="img/img8.jpg">
+                <div class="insta-img-overlay">
+                    <img src="img/social/ig.svg" class="insta-icon">
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer mb-2" id="about-footer">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="footer-title">
+                        <h4 class="title-4">Sitemap</h4>
+                    </div>
+                    <div class="footer-text">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="style-guide.html">Style Guide</a></li>
+                            <li><a href="licensing.html">Image Licensing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title">
+                        <h4 class="title-4">Contact</h4>
+                    </div>
+                    <div class="footer-text">
+                        <p>741 New South Head Rd, Triple Bay SWFW 3148, New York</p>
+                        <a href="#">P: 3740 213 301</a>
+                        <a href="#">E: contact@vardo.com</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title">
+                        <h4 class="title-4">Subscribe to our newsletter</h4>
+                    </div>
+                    <div class="footer-text">
+                        <form id="form">
+                            <div class="form-input">
+                                <input type="email" placeholder="Enter your email..." autocomplete="off">
+                                <input type="submit" value="Subscribe" class="btn btn-primary">
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" name="chck">
+                                <label for="chck">By subscribing you agree to our <span class="h-text"><a href="#">Terms & Conditions</a></span>.</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="footer-copyright">&copy; This is a <a href="#">Masterthemes</a> template remade by <a href="https://www.instagram.com/vairiskovels" target="_blank">Vairis Kovels</a>.</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/" target="_blank" class="social">
+                        <img src="img/social/ig.svg">
+                        <div class="social-overlay" id="instagram"></div>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social">
+                        <img src="img/social/twitter.svg">
+                        <div class="social-overlay" id="twitter"></div>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social">
+                        <img src="img/social/linkedin.svg">
+                        <div class="social-overlay" id="linkedin"></div>
+                    </a>
+                    <a href="https://dribbble.com/" target="_blank" class="social">
+                        <img src="img/social/dribble.svg">
+                        <div class="social-overlay" id="dribble"></div>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="social">
+                        <img src="img/social/facebook.svg">
+                        <div class="social-overlay" id="facebook"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

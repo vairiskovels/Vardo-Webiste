@@ -41,14 +41,15 @@
 }
 
 .show-img {
-  -webkit-animation: show-bckg-img .4s ease-in-out;
-          animation: show-bckg-img .4s ease-in-out;
+  opacity: 0.2;
+  -webkit-animation: show-bckg-img .5s ease;
+          animation: show-bckg-img .5s ease;
 }
 
 .hide-img {
-  display: none;
-  -webkit-animation: hide-bckg-img .4s ease-in-out;
-          animation: hide-bckg-img .4s ease-in-out;
+  opacity: 0;
+  -webkit-animation: hide-bckg-img .5s ease;
+          animation: hide-bckg-img .5s ease;
 }
 
 .m-1 {
@@ -337,6 +338,7 @@
 
 .btn-primary {
   background: #ff715b;
+  color: #fff;
 }
 
 .btn-dark {
@@ -451,15 +453,15 @@
   position: fixed;
   left: 0;
   top: 0;
-  -webkit-transform: translate(-90%, -90%);
-          transform: translate(-90%, -90%);
+  -webkit-transform: translate(-80%, -80%);
+          transform: translate(-80%, -80%);
   height: 14px;
   width: 14px;
   border-radius: 50%;
   background: rgba(47, 49, 60, 0.43);
   opacity: .7;
-  -webkit-transition: width .23s ease-in-out, height .23s ease-in-out;
-  transition: width .23s ease-in-out, height .23s ease-in-out;
+  -webkit-transition: width .25s ease, height .25s ease;
+  transition: width .25s ease, height .25s ease;
   z-index: 999;
 }
 
@@ -565,22 +567,18 @@
 
 @-webkit-keyframes hide-bckg-img {
   from {
-    display: block;
     opacity: 0.2;
   }
   to {
-    display: none;
     opacity: 0;
   }
 }
 
 @keyframes hide-bckg-img {
   from {
-    display: block;
     opacity: 0.2;
   }
   to {
-    display: none;
     opacity: 0;
   }
 }
@@ -1242,6 +1240,7 @@ img {
 input[type="submit"], button {
   border: 0;
   cursor: pointer;
+  font-size: 15px;
 }
 
 body {
@@ -1455,10 +1454,11 @@ body {
   width: 100%;
   z-index: -1;
   position: absolute;
-  opacity: 0.2;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .menu-information {
@@ -1688,5 +1688,52 @@ body {
 
 #about-b img {
   z-index: 1;
+}
+
+#contact-a .big-card-image {
+  background: url("../img/img20.jpg") no-repeat right center/cover;
+}
+
+#contact-a h2 {
+  line-height: 1;
+}
+
+#contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact-form label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+}
+
+#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+  border: 1px solid rgba(110, 110, 110, 0.4);
+  border-radius: 5px;
+  margin: 12px 0 18px 0;
+  padding-left: 20px;
+  height: 50px;
+  background: #1e2028;
+  color: #fff;
+  font-size: 16px;
+}
+
+#contact-form input[type="text"]:focus, #contact-form input[type="email"]:focus, #contact-form textarea:focus {
+  outline: none;
+}
+
+#contact-form textarea {
+  height: 200px;
+  padding: 8px 12px 151px 20px;
 }
 /*# sourceMappingURL=main.css.map */

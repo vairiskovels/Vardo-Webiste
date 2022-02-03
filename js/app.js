@@ -9,7 +9,7 @@ const btnLine = document.getElementsByClassName("btn-line");
 const scrollLine = document.getElementById("scroll-line")
 const instaImg = document.getElementsByClassName("insta-img");
 const footerSocials = document.getElementsByClassName("social");
-const buttons = document.getElementsByTagName("a");
+const buttons = document.getElementsByClassName("btn");
 console.log(buttons);
 
 // Event Listeners
@@ -163,8 +163,10 @@ function footerSocialsBackgroundRemove(e) {
 
 let circle = document.getElementById('mouse-circle');
 const onMouseMove = (e) => {
-  circle.style.left = `${e.clientX - 20}px`;
-  circle.style.top = `${e.clientY - 10}px`;
+    setTimeout(() => {
+        circle.style.left = `${e.clientX - 20}px`;
+        circle.style.top = `${e.clientY - 5}px`;
+    },40);
 
 }
 document.addEventListener('mousemove', onMouseMove);
