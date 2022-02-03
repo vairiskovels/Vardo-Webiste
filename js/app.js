@@ -163,8 +163,8 @@ function footerSocialsBackgroundRemove(e) {
 
 let circle = document.getElementById('mouse-circle');
 const onMouseMove = (e) => {
-  circle.style.left = `${e.pageX - 20}px`;
-  circle.style.top = `${e.pageY - 20}px`;
+  circle.style.left = `${e.clientX - 20}px`;
+  circle.style.top = `${e.clientY - 10}px`;
 
 }
 document.addEventListener('mousemove', onMouseMove);
