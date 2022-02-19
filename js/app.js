@@ -10,7 +10,8 @@ const scrollLine = document.getElementById("scroll-line")
 const instaImg = document.getElementsByClassName("insta-img");
 const footerSocials = document.getElementsByClassName("social");
 const buttons = document.getElementsByClassName("btn");
-console.log(buttons);
+const faqWrap = document.getElementsByClassName("faq-question-wrap");
+const faqQuestions = document.getElementsByClassName("faq-question");
 
 // Event Listeners
 document.getElementById("menu-btn").addEventListener('click', popUpMenu);
@@ -44,6 +45,9 @@ for (i = 0; i < buttons.length; i++) {
 }
 for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("mouseleave", mouseCircleSizeBack);
+}
+for (i = 0; i < faqWrap.length; i++) {
+    faqWrap[i].addEventListener("click", answerState);
 }
 
 // Function that pops-up the menu
@@ -178,4 +182,22 @@ function mouseCircleSize(e) {
 function mouseCircleSizeBack(e) {
     circle.style.width = "14px";
     circle.style.height = "14px";
+}
+
+function answerState(e) {
+    const ans = e.target.parentNode.getElementsByClassName("answer")[0];
+    const ansState = ans.classList[1];
+    const ansId = parseInt(ans.id.substr(-1));
+    if (ansState == "answer-hide") {
+        ans.classList.replace("answer-hide", "answer-show");
+    } else {
+        ans.classList.replace("answer-show", "answer-hide");
+    }
+
+    for (i = 0; i < faqQuestions.length; i++) {
+        let eId = parseInt(faqQuestions[i].getElementsByClassName("answer")[0].id.substr(-1));
+        if (eId != ansId) {
+            faqQuestions[i].getElementsByClassName("answer")[0].classList.replace("answer-show", "answer-hide");
+        }
+    }
 }
